@@ -13,6 +13,12 @@ import signal
 import threading
 from time import sleep
 import platform
+import sys
+
+if not os.environ.get('DISPLAY'):
+    print('No display found. Running in headless mode.')
+    # Handle running in headless mode
+    sys.exit(1)  # Exit or proceed with alternate logic
 
 # PyGObject
 
